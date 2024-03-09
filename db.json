@@ -7,7 +7,7 @@
       "categoria": "Integrações",
       "dataDePostagem": "2024-01-01 18:55:33",
       "autor": "John Doe",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "categoria": "Serviços",
       "dataDePostagem": "2024-02-01 18:55:33",
       "autor": "Arthur Morgan",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "categoria": "Financeiro",
       "dataDePostagem": "2024-03-01 18:55:33",
       "autor": "Diana de Themyscira",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "categoria": "Agenda",
       "dataDePostagem": "2024-04-01 18:55:33",
       "autor": "Alphonse Elrich",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "categoria": "Parceiros",
       "dataDePostagem": "2024-05-05 18:55:33",
       "autor": "Peter Parker",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "categoria": "Outros",
       "dataDePostagem": "2024-06-01 18:55:33",
       "autor": "Kaike Falcão",
-      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper. Sed mi massa, pharetra dapibus ante vitae, finibus venenatis eros. Nulla vitae aliquam augue. Nam viverra leo nec sem fringilla condimentum. Suspendisse at elit ut mauris rutrum molestie. Aliquam sagittis tellus quam, et bibendum nisi pharetra eget. "
+      "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     }
   ],
   "profile": {
