@@ -190,7 +190,7 @@ class PostController extends Controller
 	 * This method attempts to create a new comment based on the user input.
 	 * If the comment is successfully created, the browser will be redirected
 	 * to show the created comment.
-	 * @param Post the post that the new comment belongs to
+	 * @param Post the posts that the new comment belongs to
 	 * @return Comment the comment instance
 	 */
 	protected function newComment($post)

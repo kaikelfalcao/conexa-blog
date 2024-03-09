@@ -13,6 +13,6 @@ class PostTest extends CDbTestCase
 
 	public function testSave()
 	{
-		// write code here to test post saving method
+		// write code here to test posts saving method
 	}
 }

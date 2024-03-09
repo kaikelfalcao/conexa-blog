@@ -631,7 +631,7 @@ return array(
 	'ptid'=>'application/vnd.pvi.ptid1',
 	'pub'=>'application/x-mspublisher',
 	'pvb'=>'application/vnd.3gpp.pic-bw-var',
-	'pwn'=>'application/vnd.3m.post-it-notes',
+	'pwn'=>'application/vnd.3m.posts-it-notes',
 	'pya'=>'audio/vnd.ms-playready.media.pya',
 	'pyv'=>'video/vnd.ms-playready.media.pyv',
 	'qam'=>'application/vnd.epson.quickanime',

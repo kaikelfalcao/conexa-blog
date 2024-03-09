@@ -32,7 +32,7 @@ class Post extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{post}}';
+		return '{{posts}}';
 	}
 
 	/**
@@ -85,24 +85,24 @@ class Post extends CActiveRecord
 	}
 
 	/**
-	 * @return string the URL that shows the detail of the post
+	 * @return string the URL that shows the detail of the posts
 	 */
 	public function getUrl()
 	{
-		return Yii::app()->createUrl('post/view', array(
+		return Yii::app()->createUrl('posts/view', array(
 			'id'=>$this->id,
 			'title'=>$this->title,
 		));
 	}
 
 	/**
-	 * @return array a list of links that point to the post list filtered by every tag of this post
+	 * @return array a list of links that point to the posts list filtered by every tag of this posts
 	 */
 	public function getTagLinks()
 	{
 		$links=array();
 		foreach(Tag::string2array($this->tags) as $tag)
-			$links[]=CHtml::link(CHtml::encode($tag), array('post/index', 'tag'=>$tag));
+			$links[]=CHtml::link(CHtml::encode($tag), array('posts/index', 'tag'=>$tag));
 		return $links;
 	}
 
@@ -115,7 +115,7 @@ class Post extends CActiveRecord
 	}
 
 	/**
-	 * Adds a new comment to this post.
+	 * Adds a new comment to this posts.
 	 * This method will set status and post_id of the comment accordingly.
 	 * @param Comment the comment to be added
 	 * @return boolean whether the comment is saved successfully

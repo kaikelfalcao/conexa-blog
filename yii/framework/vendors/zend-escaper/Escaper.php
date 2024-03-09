@@ -31,7 +31,7 @@ class Escaper
 
     /**
      * Current encoding for escaping. If not UTF-8, we convert strings from this encoding
-     * pre-escaping and back to this encoding post-escaping.
+     * pre-escaping and back to this encoding posts-escaping.
      *
      * @var string
      */

@@ -36,7 +36,7 @@ DESCRIPTION
   the specified actions.
 
 PARAMETERS
- * controller-ID: required, controller ID, e.g., 'post'.
+ * controller-ID: required, controller ID, e.g., 'posts'.
    If the controller should be located under a subdirectory,
    please specify the controller ID as 'path/to/ControllerID',
    e.g., 'admin/user'.
@@ -50,20 +50,20 @@ PARAMETERS
    action IDs. A default 'index' action will always be generated.
 
 EXAMPLES
- * Generates the 'post' controller:
-        controller post
+ * Generates the 'posts' controller:
+        controller posts
 
- * Generates the 'post' controller with additional actions 'contact'
+ * Generates the 'posts' controller with additional actions 'contact'
    and 'about':
-        controller post contact about
+        controller posts contact about
 
- * Generates the 'post' controller which should be located under
+ * Generates the 'posts' controller which should be located under
    the 'admin' subdirectory of the base controller path:
-        controller admin/post
+        controller admin/posts
 
- * Generates the 'post' controller which should belong to
+ * Generates the 'posts' controller which should belong to
    the 'admin' module:
-        controller admin/post
+        controller admin/posts
 
 NOTE: in the last two examples, the commands are the same, but
 the generated controller file is located under different directories.

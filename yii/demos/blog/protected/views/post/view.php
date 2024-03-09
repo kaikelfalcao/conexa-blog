@@ -16,7 +16,7 @@ $this->pageTitle=$model->title;
 		</h3>
 
 		<?php $this->renderPartial('_comments',array(
-			'post'=>$model,
+			'posts'=>$model,
 			'comments'=>$model->comments,
 		)); ?>
 	<?php endif; ?>

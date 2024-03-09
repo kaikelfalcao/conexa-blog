@@ -21,7 +21,7 @@
  * <pre>
  * $this->widget('zii.widgets.CBreadcrumbs', array(
  *     'links'=>array(
- *         'Sample post'=>array('post/view', 'id'=>12),
+ *         'Sample posts'=>array('posts/view', 'id'=>12),
  *         'Edit',
  *     ),
  * ));
@@ -71,13 +71,13 @@ class CBreadcrumbs extends CWidget
 	 * create a URL). For more details, please refer to {@link CHtml::link}.
 	 * If an element's key is an integer, it means the element will be rendered as a label only (meaning the current page).
 	 *
-	 * The following example will generate breadcrumbs as "Home > Sample post > Edit", where "Home" points to the homepage,
-	 * "Sample post" points to the "index.php?r=post/view&id=12" page, and "Edit" is a label. Note that the "Home" link
+	 * The following example will generate breadcrumbs as "Home > Sample posts > Edit", where "Home" points to the homepage,
+	 * "Sample posts" points to the "index.php?r=posts/view&id=12" page, and "Edit" is a label. Note that the "Home" link
 	 * is specified via {@link homeLink} separately.
 	 *
 	 * <pre>
 	 * array(
-	 *     'Sample post'=>array('post/view', 'id'=>12),
+	 *     'Sample posts'=>array('posts/view', 'id'=>12),
 	 *     'Edit',
 	 * )
 	 * </pre>

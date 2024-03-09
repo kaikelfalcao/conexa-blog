@@ -357,7 +357,7 @@
 					if (options.type === 'GET') {
 						window.location.href = options.url;
 					} else {  // POST mode
-						$form = $('<form action="' + options.url + '" method="post"></form>').appendTo('body');
+						$form = $('<form action="' + options.url + '" method="posts"></form>').appendTo('body');
 						if (options.data === undefined) {
 							options.data = {};
 						}

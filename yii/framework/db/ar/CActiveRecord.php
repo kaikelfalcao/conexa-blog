@@ -472,7 +472,7 @@ abstract class CActiveRecord extends CModel
 	 * Besides the above relation types, a special relation called STAT is also supported
 	 * that can be used to perform statistical query (or aggregational query).
 	 * It retrieves the aggregational information about the related objects, such as the number
-	 * of comments for each post, the average rating for each product, etc.
+	 * of comments for each posts, the average rating for each product, etc.
 	 *
 	 * Each kind of related objects is defined in this method as an array with the following elements:
 	 * <pre>
@@ -592,7 +592,7 @@ abstract class CActiveRecord extends CModel
 	 * Returns the text label for the specified attribute.
 	 * This method overrides the parent implementation by supporting
 	 * returning the label defined in relational object.
-	 * In particular, if the attribute name is in the form of "post.author.name",
+	 * In particular, if the attribute name is in the form of "posts.author.name",
 	 * then this method will derive the label from the "author" relation's "name" attribute.
 	 * @param string $attribute the attribute name
 	 * @return string the attribute label
@@ -1145,7 +1145,7 @@ abstract class CActiveRecord extends CModel
 	 * You may consider the following alternative if you want to do so:
 	 * <pre>
 	 * $postRecord=Post::model()->findByPk($postID);
-	 * $postRecord->attributes=$_POST['post'];
+	 * $postRecord->attributes=$_POST['posts'];
 	 * $postRecord->save();
 	 * </pre>
 	 * @param array $attributes attributes to be updated. Each element represents an attribute name
@@ -1980,7 +1980,7 @@ class CBaseActiveRelation extends CComponent
 	 */
 	public $join='';
 	/**
-	 * @var string|array property for setting post-JOIN operations such as USE INDEX.
+	 * @var string|array property for setting posts-JOIN operations such as USE INDEX.
 	 * String typed value can be used with JOINs for HAS_MANY and MANY_MANY relations, while array typed
 	 * value designed to be used only with MANY_MANY relations. First array element will be used for junction
 	 * table JOIN and second array element will be used for target table JOIN.

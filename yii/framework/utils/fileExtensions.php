@@ -124,7 +124,7 @@ return array(
 	'application/vnd.3gpp.pic-bw-small'=>'psb',
 	'application/vnd.3gpp.pic-bw-var'=>'pvb',
 	'application/vnd.3gpp2.tcap'=>'tcap',
-	'application/vnd.3m.post-it-notes'=>'pwn',
+	'application/vnd.3m.posts-it-notes'=>'pwn',
 	'application/vnd.accpac.simply.aso'=>'aso',
 	'application/vnd.accpac.simply.imp'=>'imp',
 	'application/vnd.acucobol'=>'acu',

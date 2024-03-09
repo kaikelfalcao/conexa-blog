@@ -91,10 +91,10 @@ class CForm extends CFormElement implements ArrayAccess
 	 */
 	public $description;
 	/**
-	 * @var string the submission method of this form. Defaults to 'post'.
+	 * @var string the submission method of this form. Defaults to 'posts'.
 	 * This property is ignored when this form is a sub-form.
 	 */
-	public $method='post';
+	public $method='posts';
 	/**
 	 * @var mixed the form action URL (see {@link CHtml::normalizeUrl} for details about this parameter.)
 	 * Defaults to an empty string, meaning the current request URL.

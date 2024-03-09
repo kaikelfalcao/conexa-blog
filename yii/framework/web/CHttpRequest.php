@@ -1176,7 +1176,7 @@ class CHttpRequest extends CApplicationComponent
 
 		header('Pragma: public');
 		header('Expires: 0');
-		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+		header('Cache-Control: must-revalidate, posts-check=0, pre-check=0');
 		header("Content-Type: $mimeType");
 		header('Content-Length: '.$length);
 		header("Content-Disposition: attachment; filename=\"$fileName\"");

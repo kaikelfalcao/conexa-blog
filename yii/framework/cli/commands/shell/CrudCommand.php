@@ -51,7 +51,7 @@ PARAMETERS
    If the model class belongs to a module, it should be specified
    as 'ModuleID.models.ClassName'.
 
- * controller-ID: optional, the controller ID (e.g. 'post').
+ * controller-ID: optional, the controller ID (e.g. 'posts').
    If this is not specified, the model class name will be used
    as the controller ID. In this case, if the model belongs to
    a module, the controller will also be created under the same
@@ -74,7 +74,7 @@ EXAMPLES
 
  * Generates CRUD for the Post model. The generated controller should
    belong to module 'admin', but not the model class:
-        crud Post admin/post
+        crud Post admin/posts
 
 EOD;
 	}

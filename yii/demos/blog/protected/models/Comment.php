@@ -55,7 +55,7 @@ class Comment extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'post' => array(self::BELONGS_TO, 'Post', 'post_id'),
+			'posts' => array(self::BELONGS_TO, 'Post', 'post_id'),
 		);
 	}
 
@@ -86,8 +86,8 @@ class Comment extends CActiveRecord
 	}
 
 	/**
-	 * @param Post the post that this comment belongs to. If null, the method
-	 * will query for the post.
+	 * @param Post the posts that this comment belongs to. If null, the method
+	 * will query for the posts.
 	 * @return string the permalink URL for this comment
 	 */
 	public function getUrl($post=null)
@@ -122,7 +122,7 @@ class Comment extends CActiveRecord
 	 */
 	public function findRecentComments($limit=10)
 	{
-		return $this->with('post')->findAll(array(
+		return $this->with('posts')->findAll(array(
 			'condition'=>'t.status='.self::STATUS_APPROVED,
 			'order'=>'t.create_time DESC',
 			'limit'=>$limit,

@@ -318,11 +318,11 @@ class CHtml
 	 * Generates an opening form tag.
 	 * This is a shortcut to {@link beginForm}.
 	 * @param mixed $action the form action URL (see {@link normalizeUrl} for details about this parameter.)
-	 * @param string $method form method (e.g. post, get)
+	 * @param string $method form method (e.g. posts, get)
 	 * @param array $htmlOptions additional HTML attributes (see {@link tag}).
 	 * @return string the generated form tag.
 	 */
-	public static function form($action='',$method='post',$htmlOptions=array())
+	public static function form($action='',$method='posts',$htmlOptions=array())
 	{
 		return self::beginForm($action,$method,$htmlOptions);
 	}
@@ -332,18 +332,18 @@ class CHtml
 	 * Note, only the open tag is generated. A close tag should be placed manually
 	 * at the end of the form.
 	 * @param mixed $action the form action URL (see {@link normalizeUrl} for details about this parameter.)
-	 * @param string $method form method (e.g. post, get)
+	 * @param string $method form method (e.g. posts, get)
 	 * @param array $htmlOptions additional HTML attributes (see {@link tag}).
 	 * @return string the generated form tag.
 	 * @see endForm
 	 */
-	public static function beginForm($action='',$method='post',$htmlOptions=array())
+	public static function beginForm($action='',$method='posts',$htmlOptions=array())
 	{
 		$htmlOptions['action']=$url=self::normalizeUrl($action);
-		if(strcasecmp($method,'get')!==0 && strcasecmp($method,'post')!==0)
+		if(strcasecmp($method,'get')!==0 && strcasecmp($method,'posts')!==0)
 		{
 			$customMethod=$method;
-			$method='post';
+			$method='posts';
 		}
 		else
 			$customMethod=false;
@@ -362,7 +362,7 @@ class CHtml
 			}
 		}
 		$request=Yii::app()->request;
-		if($request->enableCsrfValidation && !strcasecmp($method,'post'))
+		if($request->enableCsrfValidation && !strcasecmp($method,'posts'))
 			$hiddens[]=self::hiddenField($request->csrfTokenName,$request->getCsrfToken(),array('id'=>false));
 		if($customMethod!==false)
 			$hiddens[]=self::hiddenField('_method',$customMethod);
@@ -387,11 +387,11 @@ class CHtml
 	 * hidden field for storing persistent page states. You should use this method to generate
 	 * a form tag if you want to access persistent page states when the form is submitted.
 	 * @param mixed $action the form action URL (see {@link normalizeUrl} for details about this parameter.)
-	 * @param string $method form method (e.g. post, get)
+	 * @param string $method form method (e.g. posts, get)
 	 * @param array $htmlOptions additional HTML attributes (see {@link tag}).
 	 * @return string the generated form tag.
 	 */
-	public static function statefulForm($action='',$method='post',$htmlOptions=array())
+	public static function statefulForm($action='',$method='posts',$htmlOptions=array())
 	{
 		return self::form($action,$method,$htmlOptions)."\n".
 			self::tag('div',array('style'=>'display:none'),self::pageStateField(''));
@@ -1412,8 +1412,8 @@ EOD;
 	 * GET parameters, and the {@link CController::createUrl} method will be invoked to
 	 * create a URL. In this case, the first array element refers to the controller route,
 	 * and the rest key-value pairs refer to the additional GET parameters for the URL.
-	 * For example, <code>array('post/list', 'page'=>3)</code> may be used to generate the URL
-	 * <code>/index.php?r=post/list&page=3</code>.
+	 * For example, <code>array('posts/list', 'page'=>3)</code> may be used to generate the URL
+	 * <code>/index.php?r=posts/list&page=3</code>.
 	 *
 	 * @param mixed $url the parameter to be used to generate a valid URL
 	 * @return string the normalized URL
@@ -2274,8 +2274,8 @@ EOD;
 	 * which is the model, the current &lt;option&gt; tag is generated from.
 	 *
 	 * <pre>
-	 * CHtml::listData($posts,'id',function($post) {
-	 * 	return CHtml::encode($post->title);
+	 * CHtml::listData($posts,'id',function($posts) {
+	 * 	return CHtml::encode($posts->title);
 	 * });
 	 * </pre>
 	 *

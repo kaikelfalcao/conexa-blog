@@ -61,18 +61,18 @@
  * For example,
  * <pre>
  * array(
- *      '<_c:(post|comment)>/<id:\d+>/<_a:(create|update|delete)>'=>'<_c>/<_a>',
- *      '<_c:(post|comment)>/<id:\d+>'=>'<_c>/view',
- *      '<_c:(post|comment)>s/*'=>'<_c>/list',
+ *      '<_c:(posts|comment)>/<id:\d+>/<_a:(create|update|delete)>'=>'<_c>/<_a>',
+ *      '<_c:(posts|comment)>/<id:\d+>'=>'<_c>/view',
+ *      '<_c:(posts|comment)>s/*'=>'<_c>/list',
  * )
  * </pre>
  * In the above, we use two named parameters '<_c>' and '<_a>' in the route part. The '<_c>'
- * parameter matches either 'post' or 'comment', while the '<_a>' parameter matches an action ID.
+ * parameter matches either 'posts' or 'comment', while the '<_a>' parameter matches an action ID.
  *
  * Like normal rules, these rules can be used for both parsing and creating URLs.
- * For example, using the rules above, the URL '/index.php/post/123/create'
- * would be parsed as the route 'post/create' with GET parameter 'id' being 123.
- * And given the route 'post/list' and GET parameter 'page' being 2, we should get a URL
+ * For example, using the rules above, the URL '/index.php/posts/123/create'
+ * would be parsed as the route 'posts/create' with GET parameter 'id' being 123.
+ * And given the route 'posts/list' and GET parameter 'page' being 2, we should get a URL
  * '/index.php/posts/page/2'.
  *
  * It is also possible to include hostname into the rules for parsing and creating URLs.

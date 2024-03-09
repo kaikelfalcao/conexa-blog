@@ -13,9 +13,9 @@ class CommentTest extends WebTestCase
 
 	public function testCreate()
 	{
-		$this->open('post/1/xyz');
+		$this->open('posts/1/xyz');
 
-	    // verify the sample post title exists
+	    // verify the sample posts title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	    $this->assertElementPresent("name=Comment[author]");
 

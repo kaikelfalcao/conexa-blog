@@ -978,7 +978,7 @@ class HTMLPurifier_AttrValidator
 
         $context->destroy('CurrentAttr');
 
-        // post transforms
+        // posts transforms
 
         // global (error reporting untested)
         foreach ($definition->info_attr_transform_post as $transform) {
@@ -5066,7 +5066,7 @@ class HTMLPurifier_Exception extends Exception
 
 
 /**
- * Represents a pre or post processing filter on HTML Purifier's output
+ * Represents a pre or posts processing filter on HTML Purifier's output
  *
  * Sometimes, a little ad-hoc fixing of HTML has to be done before
  * it gets sent through HTML Purifier: you can use filters to acheive
@@ -6460,7 +6460,7 @@ class HTMLPurifier_HTMLModuleManager
             $modules[] = 'TargetBlank';
         }
         // NB: HTML.TargetNoreferrer and HTML.TargetNoopener must be AFTER HTML.TargetBlank
-        // so that its post-attr-transform gets run afterwards.
+        // so that its posts-attr-transform gets run afterwards.
         if ($config->get('HTML.TargetNoreferrer')) {
             $modules[] = 'TargetNoreferrer';
         }
@@ -13588,7 +13588,7 @@ class HTMLPurifier_AttrTransform_Background extends HTMLPurifier_AttrTransform
 
 
 
-// this MUST be placed in post, as it assumes that any value in dir is valid
+// this MUST be placed in posts, as it assumes that any value in dir is valid
 
 /**
  * Post-trasnform that ensures that bdo tags have the dir attribute set.
@@ -13795,7 +13795,7 @@ class HTMLPurifier_AttrTransform_EnumToCSS extends HTMLPurifier_AttrTransform
  * Transform that supplies default values for the src and alt attributes
  * in img tags, as well as prevents the img tag from being removed
  * because of a missing alt tag. This needs to be registered as both
- * a pre and post attribute transform.
+ * a pre and posts attribute transform.
  */
 class HTMLPurifier_AttrTransform_ImgRequired extends HTMLPurifier_AttrTransform
 {
@@ -13901,7 +13901,7 @@ class HTMLPurifier_AttrTransform_ImgSpace extends HTMLPurifier_AttrTransform
 
 /**
  * Performs miscellaneous cross attribute validation and filtering for
- * input elements. This is meant to be a post-transform.
+ * input elements. This is meant to be a posts-transform.
  */
 class HTMLPurifier_AttrTransform_Input extends HTMLPurifier_AttrTransform
 {
@@ -13959,7 +13959,7 @@ class HTMLPurifier_AttrTransform_Input extends HTMLPurifier_AttrTransform
 /**
  * Post-transform that copies lang's value to xml:lang (and vice-versa)
  * @note Theoretically speaking, this could be a pre-transform, but putting
- *       post is more efficient.
+ *       posts is more efficient.
  */
 class HTMLPurifier_AttrTransform_Lang extends HTMLPurifier_AttrTransform
 {
@@ -16113,7 +16113,7 @@ class HTMLPurifier_HTMLModule_Forms extends HTMLPurifier_HTMLModule
                 'accept' => 'ContentTypes',
                 'accept-charset' => 'Charsets',
                 'action*' => 'URI',
-                'method' => 'Enum#get,post',
+                'method' => 'Enum#get,posts',
                 // really ContentType, but these two are the only ones used today
                 'enctype' => 'Enum#application/x-www-form-urlencoded,multipart/form-data',
             )
@@ -20022,7 +20022,7 @@ class HTMLPurifier_Strategy_FixNesting extends HTMLPurifier_Strategy
         //####################################################################//
         // Loop
 
-        // We need to implement a post-order traversal iteratively, to
+        // We need to implement a posts-order traversal iteratively, to
         // avoid running into stack space limits.  This is pretty tricky
         // to reason about, so we just manually stack-ify the recursive
         // variant:

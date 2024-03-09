@@ -15,14 +15,14 @@ class PostTest extends WebTestCase
 	    $this->open('');
 	    // verify header title exists
 	    $this->assertTextPresent('Yii Blog Demo');
-	    // verify the sample post title exists
+	    // verify the sample posts title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	}
 
 	public function testView()
 	{
-		$this->open('post/1/xyz');
-	    // verify the sample post title exists
+		$this->open('posts/1/xyz');
+	    // verify the sample posts title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	    // verify comment form exists
 	    $this->assertTextPresent('Leave a Comment');
