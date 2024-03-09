@@ -55,6 +55,14 @@
       "corpo": "Praesent cursus libero pharetra, cursus nunc id, blandit eros. Pellentesque aliquam scelerisque metus. Vivamus lobortis quis tortor sit amet ullamcorper."
     }
   ],
+  "categorias": [
+    "Integrações",
+    "Serviços",
+    "Financeiro",
+    "Agenda",
+    "Parceiros",
+    "Outros"
+  ],
   "profile": {
     "name": "kaikelfalcao"
   }
