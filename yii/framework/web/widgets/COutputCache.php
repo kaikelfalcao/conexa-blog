@@ -142,8 +142,8 @@ class COutputCache extends CFilterWidget
 	 *     'sql'=>'SELECT MAX(lastModified) FROM Post',
 	 * )
 	 * </pre>
-	 * would make the output cache depends on the last modified time of all posts.
-	 * If any posts has its modification time changed, the cached content would be invalidated.
+	 * would make the output cache depends on the last modified time of all post.
+	 * If any post has its modification time changed, the cached content would be invalidated.
 	 */
 	public $dependency;
 

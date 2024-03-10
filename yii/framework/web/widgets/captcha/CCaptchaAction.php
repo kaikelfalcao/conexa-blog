@@ -280,7 +280,7 @@ class CCaptchaAction extends CAction
 
 		header('Pragma: public');
 		header('Expires: 0');
-		header('Cache-Control: must-revalidate, posts-check=0, pre-check=0');
+		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 		header('Content-Transfer-Encoding: binary');
 		header("Content-Type: image/png");
 		imagepng($image);
@@ -327,7 +327,7 @@ class CCaptchaAction extends CAction
 
 		header('Pragma: public');
 		header('Expires: 0');
-		header('Cache-Control: must-revalidate, posts-check=0, pre-check=0');
+		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 		header('Content-Transfer-Encoding: binary');
 		header("Content-Type: image/png");
 		$image->setImageFormat('png');

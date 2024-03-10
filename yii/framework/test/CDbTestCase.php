@@ -21,15 +21,15 @@ Yii::import('system.test.CTestCase');
  * For example, assume we declare {@link fixtures} to be:
  * <pre>
  * public $fixtures=array(
- *     'posts' => 'Post',
+ *     'post' => 'Post',
  *     'comments' => 'Comment',
  * );
  * </pre>
  *
- * We can access the original fixture data rows using <code>$this->posts</code>
- * <code>$this->posts['first posts']</code>. We can also retrieve an ActiveRecord instance
- * corresponding to a fixture data row using <code>$this->posts('first posts')</code>.
- * Note, here 'first posts' refers to a key to a row in the original fixture data.
+ * We can access the original fixture data rows using <code>$this->post</code>
+ * <code>$this->post['first post']</code>. We can also retrieve an ActiveRecord instance
+ * corresponding to a fixture data row using <code>$this->post('first post')</code>.
+ * Note, here 'first post' refers to a key to a row in the original fixture data.
  *
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -42,7 +42,7 @@ abstract class CDbTestCase extends CTestCase
 	 * @var array a list of fixtures that should be loaded before each test method executes.
 	 * The array keys are fixture names, and the array values are either AR class names
 	 * or table names. If table names, they must begin with a colon character (e.g. 'Post'
-	 * means an AR class, while ':posts' means a table name).
+	 * means an AR class, while ':post' means a table name).
 	 * Defaults to false, meaning fixtures will not be used at all.
 	 */
 	protected $fixtures=false;

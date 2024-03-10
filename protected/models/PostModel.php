@@ -1,9 +1,34 @@
 <?php
 
-class PostsModel extends CFormModel
+class PostModel extends CFormModel
 {
-    public $posts;
+    public $titulo;
+    public $resumo;
+    public $categoria;
+    public $autor;
+    public $corpo;
 
+    public function rules()
+    {
+        return array(
+            array('titulo, resumo, categoria, autor, corpo', 'required', 'message' => 'Este campo é obrigatório.'),
+            array('titulo', 'length', 'max'=>128),
+            array('autor', 'length', 'max'=>128),
+            array('categoria', 'numerical', 'integerOnly'=>true),
+
+        );
+    }
+
+    public function attributeLabels()
+    {
+        return array(
+            'titulo' => 'Título',
+            'resumo' => 'Resumo',
+            'categoria' => 'Categoria',
+            'autor' => 'Autor',
+            'corpo' => 'Corpo',
+        );
+    }
 
     public function getPosts()
     {

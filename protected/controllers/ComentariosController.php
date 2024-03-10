@@ -15,8 +15,13 @@ class ComentariosController extends Controller
 
     public function actionStore()
     {
-        var_dump($_POST);
-        die();
+        $params = $_POST;
+
+        if($params['corpo'] == ''){
+            Yii::app()->user->setFlash('error', 'Para postar um comentario o corpo é necessario');
+            $id = $params['idPost'];
+            $this->redirect("/post/show?id=$id#comentarios");
+        }
     }
 
 }

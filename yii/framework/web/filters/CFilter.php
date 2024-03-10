@@ -65,7 +65,7 @@ class CFilter extends CComponent implements IFilter
 	}
 
 	/**
-	 * Performs the posts-action filtering.
+	 * Performs the post-action filtering.
 	 * @param CFilterChain $filterChain the filter chain that the filter is on.
 	 */
 	protected function postFilter($filterChain)

@@ -63,12 +63,30 @@
     }
   ],
   "categorias": [
-    "Integrações",
-    "Serviços",
-    "Financeiro",
-    "Agenda",
-    "Parceiros",
-    "Outros"
+    {
+      "id": 1,
+      "categoria": "Integrações"
+    },
+    {
+      "id": 2,
+      "categoria": "Serviços"
+    },
+    {
+      "id": 3,
+      "categoria": "Financeiro"
+    },
+    {
+      "id": 4,
+      "categoria": "Agenda"
+    },
+    {
+      "id": 5,
+      "categoria": "Parceiros"
+    },
+    {
+      "id": 6,
+      "categoria": "Outros"
+    }
   ],
   "profile": {
     "name": "kaikelfalcao"

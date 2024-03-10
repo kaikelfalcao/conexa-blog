@@ -1,6 +1,6 @@
 <header class="max-w-xl mx-auto text-center">
     <h1 class="text-4xl">
-        Ultimas postagens da <span class="text-orange-500">Conexa</span>
+        Ultimas postagens da <span class="text-orange-400">Conexa</span>
     </h1>
 
     <div x-data="{ open: false }" class="relative inline-flex mt-4 mb-4 mr-10">
@@ -12,7 +12,7 @@
         </button>
         <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                <a href="/index.php/posts" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Todos</a>
+                <a href="/post" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Todos</a>
                 <?php foreach ($categorias as $categoria): ?>
                     <a href="?categoria=<?php echo $categoria . "&" . http_build_query(array_diff_key($_GET, ['categoria' => ''])); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                         <?php echo $categoria; ?>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <a href="/posts/create" class="inline-flex items-center px-4 py-2 bg-orange-400 text-white font-bold rounded-md hover:bg-orange-200 hover:text-white focus:bg-orange-200 focus:text-white">
+    <a href="/post/create" class="inline-flex items-center px-4 py-2 bg-orange-400 text-white font-bold rounded-md hover:bg-orange-200 hover:text-white focus:bg-orange-200 focus:text-white">
         Criar Post
     </a>
 
@@ -36,7 +36,7 @@
 <?php endif; ?>
 
 <?php foreach ($posts as $post): ?>
-<section class="bg-white rounded-lg shadow-md mb-8">
+<section class="bg-white rounded-lg shadow mb-8" id="comentarios">
     <header class="py-4 px-6 border-b border-gray-200">
         <h2 class="text-xl font-bold text-gray-800">
             <?= $post["titulo"]; ?>
@@ -66,7 +66,7 @@
         <?= $post["resumo"]; ?>
     </div>
     <footer class="py-4 px-6 border-t border-gray-200">
-        <a href="/posts/show?id=<?= $post["id"] ?>" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded hover:bg-orange-200 hover:text-white focus:bg-orange-200 focus:text-white">
+        <a href="/post/show?id=<?= $post["id"] ?>" class="text-orange-400 hover:text-orange-300">
             Ler mais
         </a>
     </footer>

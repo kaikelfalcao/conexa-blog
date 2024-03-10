@@ -17,7 +17,7 @@
  * $criteria->compare('status',Post::STATUS_ACTIVE);
  * $criteria->addInCondition('id',array(1,2,3,4,5,6));
  *
- * $posts = Post::model()->findAll($criteria);
+ * $post = Post::model()->findAll($criteria);
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @package system.db.schema

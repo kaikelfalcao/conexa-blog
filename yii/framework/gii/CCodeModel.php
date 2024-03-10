@@ -435,7 +435,7 @@ abstract class CCodeModel extends CFormModel
 
 	/**
 	 * Converts a class name into a HTML ID.
-	 * For example, 'PostTag' will be converted as 'posts-tag'.
+	 * For example, 'PostTag' will be converted as 'post-tag'.
 	 * @param string $name the string to be converted
 	 * @return string the resulting ID
 	 */

@@ -2909,7 +2909,7 @@ class CHttpRequest extends CApplicationComponent
 		$length=$contentEnd-$contentStart+1; // Calculate new content length
 		header('Pragma: public');
 		header('Expires: 0');
-		header('Cache-Control: must-revalidate, posts-check=0, pre-check=0');
+		header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 		header("Content-Type: $mimeType");
 		header('Content-Length: '.$length);
 		header("Content-Disposition: attachment; filename=\"$fileName\"");
@@ -5016,17 +5016,17 @@ class CHtml
 		$htmlOptions=array_merge($defaultHtmlOptions,$htmlOptions);
 		return self::tag('script',$htmlOptions,'');
 	}
-	public static function form($action='',$method='posts',$htmlOptions=array())
+	public static function form($action='',$method='post',$htmlOptions=array())
 	{
 		return self::beginForm($action,$method,$htmlOptions);
 	}
-	public static function beginForm($action='',$method='posts',$htmlOptions=array())
+	public static function beginForm($action='',$method='post',$htmlOptions=array())
 	{
 		$htmlOptions['action']=$url=self::normalizeUrl($action);
-		if(strcasecmp($method,'get')!==0 && strcasecmp($method,'posts')!==0)
+		if(strcasecmp($method,'get')!==0 && strcasecmp($method,'post')!==0)
 		{
 			$customMethod=$method;
-			$method='posts';
+			$method='post';
 		}
 		else
 			$customMethod=false;
@@ -5044,7 +5044,7 @@ class CHtml
 			}
 		}
 		$request=Yii::app()->request;
-		if($request->enableCsrfValidation && !strcasecmp($method,'posts'))
+		if($request->enableCsrfValidation && !strcasecmp($method,'post'))
 			$hiddens[]=self::hiddenField($request->csrfTokenName,$request->getCsrfToken(),array('id'=>false));
 		if($customMethod!==false)
 			$hiddens[]=self::hiddenField('_method',$customMethod);
@@ -5056,7 +5056,7 @@ class CHtml
 	{
 		return '</form>';
 	}
-	public static function statefulForm($action='',$method='posts',$htmlOptions=array())
+	public static function statefulForm($action='',$method='post',$htmlOptions=array())
 	{
 		return self::form($action,$method,$htmlOptions)."\n".
 			self::tag('div',array('style'=>'display:none'),self::pageStateField(''));

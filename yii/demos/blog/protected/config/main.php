@@ -18,7 +18,7 @@ return array(
 		'application.components.*',
 	),
 
-	'defaultController'=>'posts',
+	'defaultController'=>'post',
 
 	// application components
 	'components'=>array(
@@ -48,8 +48,8 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'posts/<id:\d+>/<title:.*?>'=>'posts/view',
-				'posts/<tag:.*?>'=>'posts/index',
+				'post/<id:\d+>/<title:.*?>'=>'post/view',
+				'post/<tag:.*?>'=>'post/index',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),

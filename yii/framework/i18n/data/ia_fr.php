@@ -149,7 +149,7 @@ return array (
     'wide' => 
     array (
       0 => 'ante Christo',
-      1 => 'posts Christo',
+      1 => 'post Christo',
     ),
     'narrow' => 
     array (

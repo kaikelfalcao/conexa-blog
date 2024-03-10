@@ -11,7 +11,7 @@
 Yii::import('zii.widgets.jui.CJuiInputWidget');
 
 /**
- * CJuiSliderInput displays a slider. It can be used in forms and posts its value.
+ * CJuiSliderInput displays a slider. It can be used in forms and post its value.
  *
  * CJuiSlider encapsulates the {@link http://jqueryui.com/slider/ JUI
  * slider} plugin.

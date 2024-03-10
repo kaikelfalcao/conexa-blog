@@ -7,7 +7,7 @@ class CommentTest extends CDbTestCase
 	 * @see CWebTestCase::fixtures
 	 */
 	public $fixtures=array(
-		'posts'=>'Post',
+		'post'=>'Post',
 		'comments'=>'Comment',
 	);
 

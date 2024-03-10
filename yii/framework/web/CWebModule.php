@@ -187,7 +187,7 @@ class CWebModule extends CModule
 	}
 
 	/**
-	 * The posts-filter for controller actions.
+	 * The post-filter for controller actions.
 	 * This method is invoked after the currently requested controller action and all its filters
 	 * are executed. If you override this method, make sure you call the parent implementation at the end.
 	 * @param CController $controller the controller

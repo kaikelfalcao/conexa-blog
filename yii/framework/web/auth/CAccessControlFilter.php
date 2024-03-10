@@ -30,7 +30,7 @@
  *   'actions'=>array('edit', 'delete'),
  * 
  *   // optional, list of controller IDs (case insensitive) that this rule applies to
- *   'controllers'=>array('posts', 'admin/user'),
+ *   'controllers'=>array('post', 'admin/user'),
  * 
  *   // optional, list of usernames (case insensitive) that this rule applies to
  *   // Use * to represent all users, ? guest users, and @ authenticated users

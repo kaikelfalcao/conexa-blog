@@ -79,8 +79,8 @@ EXAMPLES
  * Generates the Post model:
         model Post
 
- * Generates the Post model which is associated with table 'posts':
-        model Post posts
+ * Generates the Post model which is associated with table 'post':
+        model Post post
 
  * Generates the Post model which should belong to module 'admin':
         model admin.models.Post

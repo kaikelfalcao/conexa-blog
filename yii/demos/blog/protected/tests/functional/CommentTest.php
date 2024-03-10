@@ -7,15 +7,15 @@ class CommentTest extends WebTestCase
 	 * @see CWebTestCase::fixtures
 	 */
 	public $fixtures=array(
-		'posts'=>'Post',
+		'post'=>'Post',
 		'comments'=>'Comment',
 	);
 
 	public function testCreate()
 	{
-		$this->open('posts/1/xyz');
+		$this->open('post/1/xyz');
 
-	    // verify the sample posts title exists
+	    // verify the sample post title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	    $this->assertElementPresent("name=Comment[author]");
 

@@ -7,12 +7,12 @@ class PostTest extends CDbTestCase
 	 * @see CWebTestCase::fixtures
 	 */
 	public $fixtures=array(
-		'posts'=>'Post',
+		'post'=>'Post',
 		'comments'=>'Comment',
 	);
 
 	public function testSave()
 	{
-		// write code here to test posts saving method
+		// write code here to test post saving method
 	}
 }

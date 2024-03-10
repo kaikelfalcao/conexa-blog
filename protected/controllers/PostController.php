@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends Controller
+class PostController extends Controller
 {
     public function actions()
     {
@@ -15,7 +15,7 @@ class PostsController extends Controller
 
     public function actionIndex()
     {
-        $posts = (new PostsModel())->getPosts();
+        $posts = (new PostModel())->getPosts();
         $categorias = (new CategoriasModel())->getCategorias();
 
         if($params = $_GET){
@@ -43,12 +43,12 @@ class PostsController extends Controller
         $params = $_GET;
 
         if (isset($params['id'])){
-            $model = new PostsModel();
+            $model = new PostModel();
             $post = $model->getPostById($params['id']);
         }
 
         if (empty($post)){
-            $this->redirect('/posts');
+            $this->redirect('/post');
         }
 
         $this->render('show', ["post" => $post]);
@@ -59,13 +59,28 @@ class PostsController extends Controller
     {
         $categorias = (new CategoriasModel())->getCategorias();
 
-        $this->render('create', ["categorias" => $categorias]);
+        $model = new PostModel();
+
+        $this->render('create', ["categorias" => $categorias, 'model' => $model]);
+
 
     }
 
     public function actionStore()
     {
-        var_dump($_POST);
+        $model = new PostModel();
+        if(isset($_POST['PostModel']))
+        {
+            $model->attributes = $_POST['PostModel'];
+            if($model->validate())
+            {
+                // Processamento do formulário aqui
+            }
+            else{
+                $this->render('create', ['model' => $model]);
+            }
+        }
+        var_dump($_POST['PostModel']);
         die();
     }
 

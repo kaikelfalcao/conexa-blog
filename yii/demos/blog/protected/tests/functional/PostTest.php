@@ -7,7 +7,7 @@ class PostTest extends WebTestCase
 	 * @see CWebTestCase::fixtures
 	 */
 	public $fixtures=array(
-		'posts'=>'Post',
+		'post'=>'Post',
 	);
 
 	public function testIndex()
@@ -15,14 +15,14 @@ class PostTest extends WebTestCase
 	    $this->open('');
 	    // verify header title exists
 	    $this->assertTextPresent('Yii Blog Demo');
-	    // verify the sample posts title exists
+	    // verify the sample post title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	}
 
 	public function testView()
 	{
-		$this->open('posts/1/xyz');
-	    // verify the sample posts title exists
+		$this->open('post/1/xyz');
+	    // verify the sample post title exists
 	    $this->assertTextPresent($this->posts['sample1']['title']);
 	    // verify comment form exists
 	    $this->assertTextPresent('Leave a Comment');

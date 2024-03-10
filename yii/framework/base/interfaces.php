@@ -348,7 +348,7 @@ interface IAuthManager
 
 	/**
 	 * Creates an authorization item.
-	 * An authorization item represents an action permission (e.g. creating a posts).
+	 * An authorization item represents an action permission (e.g. creating a post).
 	 * It has three types: operation, task and role.
 	 * Authorization items form a hierarchy. Higher level items inherit permissions representing
 	 * by lower level items.

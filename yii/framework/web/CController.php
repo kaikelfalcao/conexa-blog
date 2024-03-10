@@ -1036,7 +1036,7 @@ class CController extends CBaseController
 	/**
 	 * Refreshes the current page.
 	 * The effect of this method call is the same as user pressing the
-	 * refresh button on the browser (without posts data).
+	 * refresh button on the browser (without post data).
 	 * @param boolean $terminate whether to terminate the current application after calling this method
 	 * @param string $anchor the anchor that should be appended to the redirection URL.
 	 * Defaults to empty. Make sure the anchor starts with '#' if you want to specify it.

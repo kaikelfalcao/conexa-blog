@@ -152,10 +152,10 @@ class CActiveForm extends CWidget
 	 */
 	public $action='';
 	/**
-	 * @var string the form submission method. This should be either 'posts' or 'get'.
-	 * Defaults to 'posts'.
+	 * @var string the form submission method. This should be either 'post' or 'get'.
+	 * Defaults to 'post'.
 	 */
-	public $method='posts';
+	public $method='post';
 	/**
 	 * @var boolean whether to generate a stateful form (See {@link CHtml::statefulForm}). Defaults to false.
 	 */

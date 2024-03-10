@@ -78,7 +78,7 @@ class CWebApplication extends CApplication
 	 * the corresponding controller properties. For example,
 	 * <pre>
 	 * array(
-	 *   'posts'=>array(
+	 *   'post'=>array(
 	 *      'class'=>'path.to.PostController',
 	 *      'pageTitle'=>'something new',
 	 *   ),
@@ -504,7 +504,7 @@ class CWebApplication extends CApplication
 	}
 
 	/**
-	 * The posts-filter for controller actions.
+	 * The post-filter for controller actions.
 	 * This method is invoked after the currently requested controller action and all its filters
 	 * are executed. You may override this method with logic that needs to be done
 	 * after all controller actions.
