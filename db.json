@@ -3,16 +3,22 @@
     {
       "id": 1,
       "titulo": "Nova parceria com o PicPay !",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Integrações",
       "dataDePostagem": "2024-01-01 18:55:33",
       "autor": "John Doe",
-      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo.",
+      "comentarios": [
+        {
+          "username": "kaikelfalcao",
+          "texto": "Meu primeiro comentario no blog"
+        }
+      ]
     },
     {
       "id": 2,
       "titulo": "Adicionado o novo serviço de relatorios",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Serviços",
       "dataDePostagem": "2024-02-01 18:55:33",
       "autor": "Arthur Morgan",
@@ -21,7 +27,7 @@
     {
       "id": 3,
       "titulo": "Desconto Exclusivo !",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Financeiro",
       "dataDePostagem": "2024-03-01 18:55:33",
       "autor": "Diana de Themyscira",
@@ -30,7 +36,7 @@
     {
       "id": 4,
       "titulo": "Reunião Executiva Hoje",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Agenda",
       "dataDePostagem": "2024-04-01 18:55:33",
       "autor": "Alphonse Elrich",
@@ -39,7 +45,7 @@
     {
       "id": 5,
       "titulo": "Parceria com a Oscorp Inc",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Parceiros",
       "dataDePostagem": "2024-05-05 18:55:33",
       "autor": "Peter Parker",
@@ -48,7 +54,7 @@
     {
       "id": 6,
       "titulo": "Lançamento Laravel 11",
-      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sodales, nisl vehicula tempor vestibulum, libero nisl ultrices sapien, id pretium magna lectus in erat.",
+      "resumo": "Lorem ipsum dolor",
       "categoria": "Outros",
       "dataDePostagem": "2024-06-01 18:55:33",
       "autor": "Kaike Falcão",
