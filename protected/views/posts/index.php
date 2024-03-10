@@ -90,7 +90,7 @@
         </h2>
         <div class="flex items-center mt-2">
       <span class="text-sm text-gray-600 mr-2">
-        <?= $post["categoria"]; ?>
+        <a href="?categoria=<?= $post["categoria"] ?>"> <?= $post["categoria"]; ?></a>
       </span>
             <span class="text-sm text-gray-600 mr-2">•</span>
             <span class="text-sm text-gray-600">
@@ -104,6 +104,7 @@
         ?>
       </span>
       <span class="text-sm text-gray-600 ml-2">
+          <span class="text-sm text-gray-600 mr-2">•</span>
         Por <a href="?autor=<?= $post["autor"] ?>"><?php echo $post["autor"]; ?></a>
       </span>
         </div>

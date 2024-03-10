@@ -1,6 +1,6 @@
 <?php
 
-class PostModel extends CFormModel
+class PostsModel extends CFormModel
 {
     public $posts;
 
@@ -37,31 +37,6 @@ class PostModel extends CFormModel
     public function getPostById($id)
     {
         $curl = curl_init("my-json-server.typicode.com/kaikelfalcao/conexa-blog/posts/$id");
-
-        curl_setopt_array($curl, array(
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_HTTPHEADER => array(
-                'Content-Type: application/json',
-            ),
-        ));
-
-        $response = curl_exec($curl);
-        $error = curl_error($curl);
-
-        curl_close($curl);
-
-        if ($error) {
-            throw new Exception('Erro na requisição: ' . $error);
-        }
-
-        $data = json_decode($response, true);
-
-        return $data;
-    }
-
-    public function getCategorias()
-    {
-        $curl = curl_init("my-json-server.typicode.com/kaikelfalcao/conexa-blog/categorias");
 
         curl_setopt_array($curl, array(
             CURLOPT_RETURNTRANSFER => true,

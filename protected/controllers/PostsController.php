@@ -15,10 +15,8 @@ class PostsController extends Controller
 
     public function actionIndex()
     {
-        $model = new PostModel();
-        $posts = $model->getPosts();
-
-        $categorias = $model->getCategorias();
+        $posts = (new PostsModel())->getPosts();
+        $categorias = (new CategoriasModel())->getCategorias();
 
         if($params = $_GET){
             if(isset($params['categoria'])){
@@ -45,7 +43,7 @@ class PostsController extends Controller
         $params = $_GET;
 
         if (isset($params['id'])){
-            $model = new PostModel();
+            $model = new PostsModel();
             $post = $model->getPostById($params['id']);
         }
 
