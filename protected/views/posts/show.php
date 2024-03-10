@@ -48,4 +48,26 @@
     </form>
 </div>
 
+<?php if($post["comentarios"]) : ?>
+<?php foreach ($post["comentarios"] as $comentario): ?>
+        <div class="border border-gray-200 p-6 rounded-xl bg-gray-50 mt-5">
+            <article class="flex space-x-4">
+                <div>
+                    <header class="mb-4">
+                        <h3 class="font-bold"><?=$comentario['username'] ?></h3>
+<!--                        <p class="text-xs">-->
+<!--                            Posted at-->
+<!--                            <time>{{ $comment->created_at->format('F j, Y, g:i a') }}</time>-->
+<!--                        </p>-->
+                    </header>
+
+                    <p>
+                        <?=$comentario['texto'] ?>
+                    </p>
+                </div>
+            </article>
+        </div>
+<?php endforeach; ?>
+<?php endif; ?>
+
 

@@ -55,6 +55,20 @@ class PostsController extends Controller
 
     }
 
+    public function actionCreate()
+    {
+        $categorias = (new CategoriasModel())->getCategorias();
+
+        $this->render('create', ["categorias" => $categorias]);
+
+    }
+
+    public function actionStore()
+    {
+        var_dump($_POST);
+        die();
+    }
+
     public function actionError()
     {
         if($error=Yii::app()->errorHandler->error)

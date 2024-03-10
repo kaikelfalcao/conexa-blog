@@ -30,7 +30,6 @@ class PostsModel extends CFormModel
         usort($data, function($a, $b) {
             return strtotime($b['dataDePostagem']) - strtotime($a['dataDePostagem']);
         });
-
         return $data;
     }
 
