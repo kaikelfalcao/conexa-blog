@@ -22,8 +22,12 @@ class ComentarioController extends Controller
             $model->attributes = $_POST["ComentarioModel"];
             if($model->validate())
             {
-                var_dump($model);
-                die();
+                if($model->save($model) == 201){
+                    Yii::app()->user->setFlash('info', 'Comentario salvo com sucesso!');
+                }else{
+                    Yii::app()->user->setFlash('info', 'Comentario não foi salvo, tente novamente!');
+                }
+                $this->redirect("/post/show?id=$model->idPost#comentarios");
             }
             else{
                 Yii::app()->user->setFlash('error', $model->getErrors());

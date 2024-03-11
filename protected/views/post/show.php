@@ -1,5 +1,5 @@
 <div class="w-1/2 mx-auto">
-    <h1 class="text-xl font-bold text-gray-800 text-center mb-4">
+    <h1 class="text-gray-900 font-bold text-4xl text-center mb-4">
         <?= $post['titulo'] ?>
     </h1>
     <div class="flex items-center justify-center">
@@ -23,7 +23,7 @@
       </span>
     </div>
 
-    <div class="mt-4 text-sm w-[75%] mx-auto">
+    <div class="mt-4 text-sm w-[85%] mx-auto text-base leading-8 my-5">
         <?= $post['corpo'] ?>
     </div>
 
@@ -53,34 +53,37 @@
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
-            <div class="flex justify-between mt-4 border-t border-gray-200">
+            <div class="flex justify-between mt-4 border-gray-200">
                 <?php echo CHtml::submitButton('Comentar', array('class'=>'bg-orange-400 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-orange-600')); ?>
             </div>
 
             <?php $this->endWidget(); ?>
         </div>
     </section>
-    <?php if($post["comentarios"]) : ?>
-        <?php foreach ($post["comentarios"] as $comentario): ?>
-            <section class="mt-6 mb-6 w-[85%] mx-auto rounded-lg shadow-xl">
-                <div class="bg-white shadow-md rounded-xl p-6 flex flex-col">
-                    <header class="flex items-center mb-4">
-                        <img src="https://i.pravatar.cc/150?u=<?=$comentario['username'] ?>" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg"><?=$comentario['username'] ?></h3>
-                            <time class="text-gray-500 text-sm">
-                                <?php
-                                $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::FULL, IntlDateFormatter::SHORT, 'America/Sao_Paulo', IntlDateFormatter::GREGORIAN);
-                                echo $formatter->format(new DateTime($comentario["dataDeCriacao"]));
-                                ?>
-                            </time>
-                        </div>
-                    </header>
-                    <p class="text-gray-700"><?=$comentario['texto'] ?></p>
-                </div>
-            </section>
-        <?php endforeach; ?>
-    <?php endif; ?>
+    <section id="comentarios">
+        <?php if($post["comentarios"]) : ?>
+            <?php foreach ($post["comentarios"] as $comentario): ?>
+                <article class="mt-6 mb-6 w-[85%] mx-auto rounded-lg shadow-xl">
+                    <div class="bg-white shadow-md rounded-xl p-6 flex flex-col">
+                        <header class="flex items-center mb-4">
+                            <img src="https://i.pravatar.cc/150?u=<?=$comentario['username'] ?>" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-bold text-lg"><?=$comentario['username'] ?></h3>
+                                <time class="text-gray-500 text-sm">
+                                    <?php
+                                    $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::FULL, IntlDateFormatter::SHORT, 'America/Sao_Paulo', IntlDateFormatter::GREGORIAN);
+                                    echo $formatter->format(new DateTime($comentario["dataDeCriacao"]));
+                                    ?>
+                                </time>
+                            </div>
+                        </header>
+                        <p class="text-gray-700"><?=$comentario['texto'] ?></p>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </section>
 </div>
 
+<?php echo $this->renderPartial('/components/flash-message'); ?>
 
