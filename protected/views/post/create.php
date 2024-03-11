@@ -1,3 +1,5 @@
+
+<h1 class="text-center font-bold text-2xl">Criar Post</h1>
 <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'post-form',
     'enableAjaxValidation'=>false,
