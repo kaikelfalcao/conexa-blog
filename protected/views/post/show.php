@@ -60,21 +60,22 @@
     </div>
 
     <?php if($post["comentarios"]) : ?>
-    <?php foreach ($post["comentarios"] as $comentario): ?>
+        <?php foreach ($post["comentarios"] as $comentario): ?>
             <div class="bg-white shadow-md rounded-xl p-6 flex flex-col mt-4">
-                <header class="flex justify-between items-center mb-4">
-                    <h3 class="font-bold text-lg"><?=$comentario['username'] ?></h3>
-                    <time class="text-gray-500 text-sm">
-                        <?php
-                        $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::FULL, IntlDateFormatter::SHORT, 'America/Sao_Paulo', IntlDateFormatter::GREGORIAN);
-
-                        echo $formatter->format(new DateTime($post["dataDePostagem"]));
-                        ?>
-                    </time>
+                <header class="flex items-center mb-4">
+                    <img src="https://i.pravatar.cc/150?u=<?=$post['id']?>" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg"><?=$comentario['username'] ?></h3>
+                        <time class="text-gray-500 text-sm">
+                            <?php
+                            $formatter = new IntlDateFormatter('pt_BR', IntlDateFormatter::FULL, IntlDateFormatter::SHORT, 'America/Sao_Paulo', IntlDateFormatter::GREGORIAN);
+                            echo $formatter->format(new DateTime($comentario["dataDeCriacao"]));
+                            ?>
+                        </time>
+                    </div>
                 </header>
                 <p class="text-gray-700"><?=$comentario['texto'] ?></p>
             </div>
-
         <?php endforeach; ?>
     <?php endif; ?>
 </section>
