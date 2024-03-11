@@ -10,9 +10,16 @@
       "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo.",
       "comentarios": [
         {
+          "id": 1,
           "username": "kaikelfalcao",
           "dataDeCriacao": "2024-01-01 18:55:33",
           "texto": "Meu primeiro comentario no blog"
+        },
+        {
+          "id": 2,
+          "username": "yukali",
+          "dataDeCriacao": "2024-03-11 15:49:40",
+          "texto": "Adorei o post"
         }
       ]
     },
