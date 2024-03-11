@@ -1,7 +1,15 @@
 <header class="max-w-xl mx-auto text-center">
-    <h1 class="text-4xl">
-        Ultimas postagens da <span class="text-orange-400">Conexa</span>
-    </h1>
+    <span class="font-semibold text-lg text-primary block text-orange-400"
+    > Conexa
+   </span>
+    <h3
+        class="font-semibold text-3xl mb-4"
+    > Nossas Postagens Recentes
+    </h3>
+    <p class="text-base text-body-color">
+        There are many variations of passages of Lorem Ipsum available
+        but the majority have suffered alteration in some form.
+    </p>
 
     <div x-data="{ open: false }" class="relative inline-flex mt-4 mb-4 mr-10">
         <button @click="open = !open" class=" inline-flex px-2 py-2 bg-orange-400 text-white rounded-md hover:bg-orange-200 hover:text-white focus:bg-orange-200 focus:text-white">
@@ -14,8 +22,8 @@
             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                 <a href="/post" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Todos</a>
                 <?php foreach ($categorias as $categoria): ?>
-                    <a href="?categoria=<?php echo $categoria . "&" . http_build_query(array_diff_key($_GET, ['categoria' => ''])); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-                        <?php echo $categoria; ?>
+                    <a href="?categoria=<?= $categoria['categoria'] . "&" . http_build_query(array_diff_key($_GET, ['categoria' => ''])); ?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                        <?= $categoria['categoria'] ?>
                     </a>
                 <?php endforeach; ?>
             </div>

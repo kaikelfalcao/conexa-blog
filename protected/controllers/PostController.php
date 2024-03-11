@@ -48,10 +48,12 @@ class PostController extends Controller
         }
 
         if (empty($post)){
-            $this->redirect('/post');
+            return $this->render('404');
         }
 
-        $this->render('show', ["post" => $post]);
+        $modelComentario = (new ComentarioModel());
+
+        $this->render('show', ["post" => $post, 'model' => $modelComentario]);
 
     }
 
@@ -74,7 +76,8 @@ class PostController extends Controller
             $model->attributes = $_POST['PostModel'];
             if($model->validate())
             {
-                // Processamento do formulário aqui
+                var_dump($model);
+                die();
             }
             else{
                 $this->render('create', ['model' => $model]);

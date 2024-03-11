@@ -6,38 +6,38 @@
 ));
 
 $categoriasModel = new CategoriasModel();
-$categorias = $categoriasModel->getCategoriasForm();
+$categorias = $categoriasModel->getCategorias();
 
 ?>
 
 <div class="mb-4">
     <?php echo $form->labelEx($model,'titulo'); ?>
-    <?php echo $form->textField($model,'titulo',array('required' =>'true', 'class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500', 'size'=>60,'maxlength'=>128)); ?>
-    <?php echo $form->error($model,'titulo'); ?>
+    <?php echo $form->textField($model,'titulo',array('required' =>'true','class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500', 'size'=>60,'maxlength'=>128)); ?>
+    <?php echo $form->error($model,'titulo',array('class' => 'text-red-500 text-xs mt-2')); ?>
 </div>
 
 <div class="mb-4">
     <?php echo $form->labelEx($model,'resumo'); ?>
     <?php echo $form->textArea($model,'resumo',array('required' =>'true','class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500', 'rows'=>3)); ?>
-    <?php echo $form->error($model,'resumo'); ?>
+    <?php echo $form->error($model,'resumo',array('class' => 'text-red-500 text-xs mt-2')); ?>
 </div>
 
 <div class="mb-4">
     <?php echo $form->labelEx($model,'categoria'); ?>
-    <?php echo $form->dropDownList($model,'categoria', CHtml::listData($categorias, 'id', 'nome'), array('required' =>'true','class'=>'w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500', 'empty' => 'Selecione a categoria')); ?>
-    <?php echo $form->error($model,'categoria'); ?>
+    <?php echo $form->dropDownList($model,'categoria', CHtml::listData($categorias, 'id', 'categoria'), array('required' =>'true','class'=>'w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500', 'empty' => 'Selecione a categoria')); ?>
+    <?php echo $form->error($model,'categoria',array('class' => 'text-red-500 text-xs mt-2')); ?>
 </div>
 
 <div class="mb-4">
     <?php echo $form->labelEx($model,'autor'); ?>
     <?php echo $form->textField($model,'autor',array('required' =>'true','class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500', 'size'=>60,'maxlength'=>128)); ?>
-    <?php echo $form->error($model,'autor'); ?>
+    <?php echo $form->error($model,'autor',array('class' => 'text-red-500 text-xs mt-2')); ?>
 </div>
 
 <div class="mb-4">
     <?php echo $form->labelEx($model,'corpo'); ?>
     <?php echo $form->textArea($model,'corpo',array('required' =>'true','class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-blue-500', 'rows'=>10)); ?>
-    <?php echo $form->error($model,'corpo'); ?>
+    <?php echo $form->error($model,'corpo',array('class' => 'text-red-500 text-xs mt-2')); ?>
 </div>
 
 <div class="flex items-center justify-between">

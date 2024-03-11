@@ -30,27 +30,33 @@
 <section class="mt-12 w-[85%] mx-auto">
     <div class="bg-white shadow-md rounded-lg p-6">
         <h2 class="text-lg lg:text-2xl font-bold text-gray-900">Comentários (<?php echo empty($post['comentarios']) ? 0 : count($post['comentarios']); ?>)</h2>
-        <form method="POST" action="/comentarios/store">
-          <div class="mt-4 py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg">
-              <label for="nome" class="mr-2 text-sm font-medium">Nome (opcional):</label>
-              <input type="text" name="nome" id="nome" class="border border-gray-400 rounded focus:ring-blue-500 focus:border-blue-500">
-              <input type="hidden" name="idPost" id="idPost" value="<?= $post['id'] ?>">
-          <textarea
-              name="corpo"
-              id="corpo"
-              placeholder="Participe da Comunidade, digite algo !"
-              class="mt-6 px-0 w-full text-sm text-gray-900 border border-radius min-h-20 focus:ring-0"
-          ></textarea>
-            </div>
+        <?php $form=$this->beginWidget('CActiveForm', array(
+            'id'=>'comentario-form',
+            'enableAjaxValidation'=>false,
+            'action' => Yii::app()->createUrl('comentario/store'),
+        )); ?>
 
-            <?php if(Yii::app()->user->hasFlash('error')):?>
-                <span class="text-red-400 text-xs"><?php echo Yii::app()->user->getFlash('error'); ?></span>
+        <div class="mt-4 py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg">
+            <?php echo $form->labelEx($model,'nome'); ?>
+            <?php echo $form->textField($model,'nome',array('class'=>'border border-gray-400 rounded focus:ring-blue-500 focus:border-blue-500')); ?>
+
+            <?php echo $form->hiddenField($model,'idPost', array('value' => $post['id'])); ?>
+
+            <?php echo $form->textArea($model,'corpo',array('required' => 'true','class'=>'mt-6 px-0 w-full text-sm text-gray-900 border border-radius min-h-20 focus:ring-0',"placeholder"=>"Participe da Comunidade, digite algo !")); ?>
+
+            <?php if($erros = Yii::app()->user->getFlash('error')): ?>
+                <?php foreach ($erros as $erro): ?>
+                    <span class="text-xs text-red-500 mt-10">
+                        <?= $erro[0] ?>
+                    </span>
+                <?php endforeach; ?>
             <?php endif; ?>
+        </div>
+        <div class="flex justify-between mt-4 border-t border-gray-200">
+            <?php echo CHtml::submitButton('Comentar', array('class'=>'bg-orange-400 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-orange-600')); ?>
+        </div>
 
-            <div class="flex justify-between mt-4 border-t border-gray-200">
-                <button class="bg-orange-400 text-white uppercase font-semibold text-xs py-2 px-10 rounded-2xl hover:bg-orange-600">Comentar</button>
-            </div>
-        </form>
+        <?php $this->endWidget(); ?>
     </div>
 
     <?php if($post["comentarios"]) : ?>
