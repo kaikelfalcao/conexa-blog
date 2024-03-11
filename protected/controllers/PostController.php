@@ -76,8 +76,13 @@ class PostController extends Controller
             $model->attributes = $_POST['PostModel'];
             if($model->validate())
             {
-                var_dump($model);
-                die();
+                if($model->save($model) == 201){
+                    Yii::app()->user->setFlash('info', 'Post salvo com sucesso!');
+                }else{
+                    Yii::app()->user->setFlash('info', 'Post não foi salvo, tente novamente!');
+                    $this->render('create', ['model' => $model]);
+                }
+                $this->redirect('/');
             }
             else{
                 $this->render('create', ['model' => $model]);

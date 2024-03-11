@@ -47,3 +47,5 @@ $categorias = $categoriasModel->getCategorias();
 </div>
 
 <?php $this->endWidget(); ?>
+
+<?php echo $this->renderPartial('/components/flash-message'); ?>

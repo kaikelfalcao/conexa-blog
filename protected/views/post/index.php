@@ -85,4 +85,6 @@
 
     </div>
 
+    <?php echo $this->renderPartial('/components/flash-message'); ?>
+
 

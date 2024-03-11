@@ -30,7 +30,21 @@
       "categoria": "Serviços",
       "dataDePostagem": "2024-02-01 18:55:33",
       "autor": "Arthur Morgan",
-      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo.",
+      "comentarios": [
+        {
+          "id": 1,
+          "username": "Clark Kent",
+          "dataDeCriacao": "2024-01-01 18:55:33",
+          "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+        },
+        {
+          "id": 2,
+          "username": "Faker",
+          "dataDeCriacao": "2024-03-11 15:49:40",
+          "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+        }
+      ]
     },
     {
       "id": 3,
@@ -66,7 +80,21 @@
       "categoria": "Outros",
       "dataDePostagem": "2024-06-01 18:55:33",
       "autor": "Kaike Falcão",
-      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+      "corpo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo.",
+      "comentarios": [
+        {
+          "id": 1,
+          "username": "Edward Elrick",
+          "dataDeCriacao": "2024-01-01 18:55:33",
+          "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+        },
+        {
+          "id": 2,
+          "username": "Toph",
+          "dataDeCriacao": "2024-03-11 15:49:40",
+          "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nunc sit amet nunc gravida faucibus euismod sed justo."
+        }
+      ]
     }
   ],
   "categorias": [
