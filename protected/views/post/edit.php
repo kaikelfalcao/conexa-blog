@@ -29,7 +29,8 @@ $categorias = $categoriasModel->getCategorias();
 <div class="mb-4">
     <?php echo $form->labelEx($model,'categoria'); ?>
     <?php
-    $selectedCategory = array_search($model->categoria, array_column($categorias, 'categoria'));
+    $selectedCategory = array_search($model->categoria, array_column($categorias, 'categoria')) + 1;
+
 
     echo $form->dropDownList($model, 'categoria', CHtml::listData($categorias, 'id', 'categoria'), [
         'required' => 'true',
