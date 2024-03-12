@@ -2,6 +2,7 @@
 
 class PostModel extends CFormModel
 {
+    public $id;
     public $titulo;
     public $resumo;
     public $categoria;
@@ -105,6 +106,53 @@ class PostModel extends CFormModel
         curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
 
         $response = curl_exec($curl);
+        $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        return $httpcode;
+    }
+
+    public function update($model, $id)
+    {
+        $attributes = $model->attributes;
+
+        $json = json_encode($attributes);
+
+        $curl = curl_init("my-json-server.typicode.com/kaikelfalcao/conexa-blog/posts/$id");
+
+        curl_setopt($curl, CURLOPT_NOBODY, false);
+
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type:application/json'
+        ));
+
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $json);
+
+        $response = curl_exec($curl);
+        $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        curl_close($curl);
+
+        return $httpcode;
+    }
+
+    public function delete($id)
+    {
+
+        $curl = curl_init("my-json-server.typicode.com/kaikelfalcao/conexa-blog/posts/$id");
+
+        curl_setopt($curl, CURLOPT_NOBODY, false);
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+
+        $response = curl_exec($curl);
+
         $httpcode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 

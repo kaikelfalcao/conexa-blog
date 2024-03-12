@@ -6,8 +6,8 @@
             </a>
 
             <div class="flex text-gray-500 uppercase text-sm mt-4">
-                <a href="#" class="mr-2 hover:text-orange-400">Home</a>
-                <a href="#" class="mr-2 hover:text-orange-400">Nos Contate</a>
+                <a href="/" class="mr-2 hover:text-orange-400">Home</a>
+                <a href="/site/page?view=about" class="mr-2 hover:text-orange-400">Sobre nós</a>
             </div>
 
         </div>

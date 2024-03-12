@@ -21,7 +21,25 @@
         <span class="text-sm text-gray-600 mr-2">•</span>
         Por <a class="text-orange-400 hover:text-orange-200" href="/post/?autor=<?= $post["autor"] ?>"><?php echo $post["autor"]; ?></a>
       </span>
-    </div>
+
+        <div class="relative inline-block text-left ml-4">
+            <div x-data="{ open: false }" @click.away="open = false">
+                <button @click="open = !open" class=" inline-flex items-center px-2 bg-orange-400 text-white rounded-md hover:bg-orange-200 hover:text-white focus:bg-orange-200 focus:text-white">
+                    Ações
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 ml-2 -mr-1 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <div x-show="open" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <a href="/post/edit?id=<?= $post['id']?>" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Editar</a>
+                        <a href="/post/delete?id=<?= $post['id']?>"" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Deletar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 
     <div class="mt-4 text-sm w-[85%] mx-auto text-base leading-8 my-5">
         <?= $post['corpo'] ?>

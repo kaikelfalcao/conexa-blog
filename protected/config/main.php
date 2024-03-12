@@ -54,10 +54,9 @@ return array(
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
 
-		'errorHandler'=>array(
-			// use 'site/error' action to display errors
-			'errorAction'=>YII_DEBUG ? null : 'site/error',
-		),
+        'errorHandler' => [
+            'errorAction' => 'post/error',
+        ],
 
 		'log'=>array(
 			'class'=>'CLogRouter',

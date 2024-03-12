@@ -18,7 +18,7 @@
         <nav>
             <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li><a class="py-3 px-0 block hover:text-orange-400" href="/">Home</a></li>
-                <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">Contact Us</a></li>
+                <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2 hover:text-orange-400" href="/site/page?view=about">Sobre nós</a></li>
             </ul>
         </nav>
     </div>
