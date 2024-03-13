@@ -10,6 +10,11 @@ atendendo os seguintes requisitos:
 - Usar a ferramenta [my-json-server](https://my-json-server.typicode.com/)
 - Fazer validação tanto no Front como no Back
 
+## Capacidades
+- Filtrar Postagens por nome do Autor ou Categoria
+- CRUD Postagem
+- Fazer comentarios
+
 ## Índices
 - [Pré-requisitos](#Pré-requisitos)
 - [Passos](#Passos)
